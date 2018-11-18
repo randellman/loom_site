@@ -1,29 +1,33 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700,800,900");
+html h3 {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  margin-top: 0; }
+
+html h4 {
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  margin-top: 0; }
+
+html h5 {
+  margin: 0;
+  color: #f0f0f0;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+html p {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0; }
+
 body {
   font-family: 'Raleway', sans-serif;
   font-size: 14px; }
-  body h3 {
-    font-size: 16px;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 0;
-    margin-top: 0; }
-  body h4 {
-    font-size: 15px;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 0;
-    margin-top: 0; }
-  body h5 {
-    margin: 0;
-    color: #f0f0f0;
-    font-size: 14px;
-    font-weight: 700;
-    text-transform: uppercase; }
-  body p {
-    font-size: 14px;
-    font-weight: 500;
-    margin: 0; }
 
 header {
   background-color: #f5f5f5;
@@ -68,38 +72,48 @@ header {
   transition: all ease 1s; }
 
 .slider-item {
-  color: #606060;
-  display: block; }
+  position: relative;
+  min-height: 70vh;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-position: center; }
 
 .sl-item-1 {
-  position: relative;
+  background-image: url("../images/Layer-1.png"); }
+
+.sl-item-2 {
+  background-image: url("../images/ice_cream-1170x550.png"); }
+
+.sl-item-3 {
+  background-image: url("../images/Moscoman-Decoded-Magazine-1170x550.jpg"); }
+
+.sl-item-4 {
+  background-image: url("../images/1170px-x-550px.jpg"); }
+
+.sl-item-1-text {
+  color: #606060;
+  display: block;
   font-weight: 500;
-  line-height: 22px; }
-  .sl-item-1 h2 {
+  line-height: 22px;
+  position: absolute;
+  bottom: 50px;
+  left: 50px; }
+  .sl-item-1-text h2 {
+    display: block;
     background-color: #fdfdfd;
     padding: 13px 19px;
     margin: 0 0 3px;
     font-size: 20px;
     text-transform: uppercase; }
-  .sl-item-1 p {
+  .sl-item-1-text p {
     background-color: #fdfdfd;
     display: inline-block;
     padding: 13px 19px;
     margin: 0;
     font-size: 16px; }
-    .sl-item-1 p a {
+    .sl-item-1-text p a {
       color: #1abb9c; }
-
-.sl-item-1-text {
-  position: absolute;
-  display: block;
-  bottom: 50px;
-  left: 50px; }
-
-.slick-slide img {
-  width: 100%;
-  height: auto;
-  overflow: hidden; }
 
 .slick-arrow {
   position: absolute;
@@ -126,8 +140,6 @@ header {
     position: relative;
     color: #606060;
     margin-bottom: 40px; }
-    .we-do-wrap h3:hover {
-      text-decoration: underline; }
     .we-do-wrap h3::before {
       display: inline-block;
       content: '';
@@ -346,7 +358,8 @@ header {
 
 .recent-projects-text p {
   line-height: 25px;
-  margin: 22px 0 20px; }
+  margin: 22px 0 20px;
+  color: #7a7a7a; }
 
 /* --------------------Recent-Project-End----------------------- */
 /* -----------------------Customers-Slider--------------------------- */
@@ -391,7 +404,7 @@ header {
   font-size: 20px;
   font-weight: 400;
   line-height: 35px;
-  margin-bottom: 25px; }
+  margin: 50px 0 25px; }
 
 .customers-slider a {
   color: #1abb9c;
@@ -408,7 +421,7 @@ header {
     min-height: 10px;
     min-width: 10px; }
     .slick-dots li button {
-      border: 1px solid #777;
+      border: 1px solid #777777;
       width: 0;
       height: 0; }
       .slick-dots li button:hover, .slick-dots li button:active, .slick-dots li button:focus {

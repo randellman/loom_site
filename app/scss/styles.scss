@@ -1,10 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700,800,900');
-
+ 
 $main_color_grey: rgb(96, 96, 96);
 $main_color_aqua: rgb(26, 187, 156);
 $main_color_text: rgb(122, 122, 122);
-
 $main_font_size: 14px;
+
+@mixin udapt-img($width, $proportion-height){
+    position: relative;
+    width: $width;
+  &::before {
+    content: "";
+    display: block;
+    padding-top: $proportion-height;
+}
+}
 
 @mixin before_after_strings{ 
 	display:inline-block;
@@ -16,25 +25,21 @@ $main_font_size: 14px;
     top: 50%;
 }
 
-
-
-body{
-	font-family: 'Raleway', sans-serif;
-	font-size: $main_font_size;
+html{
 	h3{
 		font-size:  16px;
 		font-weight: 700;
 		text-transform: uppercase;
 		margin-bottom:0;
 		margin-top:0;
-			}
+	}
 	h4{
 		font-size: 15px;
 		font-weight: 700;
 		text-transform: uppercase;
 		margin-bottom:0;
 		margin-top:0;
-			}
+	}
 	h5{
 		margin: 0;
 		color: #f0f0f0;
@@ -48,6 +53,12 @@ body{
 		margin: 0;
 	}
 }
+
+body{
+	font-family: 'Raleway', sans-serif;
+	font-size: $main_font_size;
+}
+
 
 header{
 	background-color: #f5f5f5;
@@ -101,50 +112,62 @@ header{
 /* --------------------Slider-------------------------- */
 .slider{
 	transition: all ease 1s; 
+
 }
 
 .slider-item{
-	color: $main_color_grey;
-	display:block;
-}
+	position:relative;
+	min-height: 70vh;
+	background:{
+		repeat: no-repeat;
+		size: cover;
+		position: center;
+	}
+} 
 
 .sl-item-1{
-	position:relative;
-	font-weight: 500;
-	line-height: 22px;
-	h2{
-		background-color: #fdfdfd;
-	    padding: 13px 19px;
-	    margin: 0 0 3px;
-		font-size: 20px;
-		text-transform: uppercase;		
-}	
-	p{
-		background-color: #fdfdfd;
-		display: inline-block;
-    	padding: 13px 19px;
-    	margin: 0;
-		font-size: 16px;
-	a{
-		color:$main_color_aqua;
-		}
-	}
+	background-image: url('../images/Layer-1.png');
+}
+
+.sl-item-2{
+	background-image: url('../images/ice_cream-1170x550.png');	
+}
+
+.sl-item-3{
+	background-image: url('../images/Moscoman-Decoded-Magazine-1170x550.jpg');	
+}
+
+.sl-item-4{
+	background-image: url('../images/1170px-x-550px.jpg');	
 }
 
 .sl-item-1-text{
-	position:absolute;
+	color: $main_color_grey;
 	display: block;
-    bottom: 50px;
-    left: 50px;
+    font-weight: 500;
+	line-height: 22px;
+	position: absolute;
+	bottom: 50px;
+	left: 50px;
+		h2{
+			display: block;
+			background-color: #fdfdfd;
+	    	padding: 13px 19px;
+	    	margin: 0 0 3px;
+			font-size: 20px;
+			text-transform: uppercase;		
+		}	
+		p{
+			background-color: #fdfdfd;
+			display: inline-block;
+    		padding: 13px 19px;
+    		margin: 0;
+			font-size: 16px;
+			a{
+				color:$main_color_aqua;
+			}
+		}
 } 
-
-.slick-slide{
-	img{
-		width: 100%;
-		height: auto;
-		overflow: hidden;
-	}
-}
 
 .slick-arrow{
 	position: absolute;
@@ -175,17 +198,14 @@ header{
 		position: relative;
 		color: $main_color_grey;
 		margin-bottom: 40px ;
-		&:hover{
-			text-decoration: underline;
+		&::before{
+			@include before_after_strings;
+			left: -100px;
 		}
-	&::before{
-		@include before_after_strings;
-		left: -100px;
-	}
-	&::after{
-		@include before_after_strings;
-		right: -100px;
-	}
+		&::after{
+			@include before_after_strings;
+			right: -100px;
+		}
 	}
 }
 
@@ -210,7 +230,7 @@ header{
 			font-weight: 700;
 			color: $main_color_grey;
 			padding-top: 30px;
-			}
+		}
 		p{
 			font-size: $main_font_size;
 			font-weight: 500;
@@ -373,6 +393,7 @@ header{
 	p{
 		line-height: 25px;
 		margin: 22px 0 20px;
+		color: rgb(122,122,122);
 	}
  }
 	
@@ -392,8 +413,8 @@ header{
 }
 
 
-	.customers-slide-1{
-			h3{
+.customers-slide-1{
+	h3{
 		display: inline-block;
 		margin: 80px 0 45px;
 		color: #d0d0d0;
@@ -401,23 +422,23 @@ header{
 		font-weight: 700;
 		text-transform: uppercase;
 		position: relative;
-		&:before{
-		@include before_after_strings;
-		left: -100px;
+			&:before{
+				@include before_after_strings;
+				left: -100px;
+			}
+			&:after{
+				@include before_after_strings;
+				right: -100px;
+			}
 		}
-		&:after{
-		@include before_after_strings;
-		right: -100px;
-		}
-	}
 	}
 .customers-slider{
 	p{
-		color: #d8d8d8;
+		color: rgb(216,216,216);
 		font-size: 20px;
 		font-weight: 400;
 		line-height: 35px;
-		margin-bottom:25px;
+		margin: 50px 0 25px ;
 	}
 	a{
 		color:$main_color_aqua;
@@ -436,7 +457,7 @@ header{
 		min-height:10px;
 		min-width:10px;
 	button{
-		border: 1px solid #777;
+		border: 1px solid rgb(119,119,119);
 		width:0;
 		height:0;
 		&:hover,
