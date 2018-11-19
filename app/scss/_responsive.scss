@@ -6,30 +6,17 @@
 
 @media (min-width: 992px) and (max-width: 1199px) { 
 
- }
-
+}
 
 @media (min-width: 769px) and (max-width: 991px) { 
 
-	.we-do-block{
-		flex-basis: 46%;
-		margin: 2%;
-	}
-
-	.process-block-item{
-		flex-basis: 33.3%;
-	}
-
-	.process-block-item-str{
-		flex-basis: 33.3%;
-			&:nth-child(4){
-				display: none;
-			}
-	}
-}
+}	
 
 
 @media (max-width: 768px) { 
+
+	/* -------------------------Header---------------------------- */
+		
 	#header-nav{
 		display: none;
 	}
@@ -52,24 +39,9 @@
 			padding: 5px 0;
 		}
 	}
+	/* -----------------------Header-end-------------------------- */
 
-	
-	.we-do-block{
-		flex-basis: 96%;
-		margin: 2%;
-	}
-
-
-	.process-block-item{
-		flex-basis: 33.3%;
-	}
-
-	.process-block-item-str{
-		flex-basis: 33.3%;
-			&:nth-child(4){
-			display: none;
-		}
-	}			
+	/* -------------------Process-block------------------------- */	
 
 	.process-text{
 		h3{
@@ -80,8 +52,9 @@
 		}
 	}
 
+	/* -------------------Process-block-end------------------------ */
 
-
+	/* -------------------Recent-Project----------------------- */
 
 	.recent-projects-wrap{
 		h3{
@@ -92,9 +65,9 @@
 		}
 	}	
 
+	/* -------------------Recent-Project-end---------------------- */
 
-
-
+	/*----------------------- Journal-block------------------------ */
 
 
 	.journal-text-p{
@@ -109,6 +82,7 @@
 			}
 		}
 	}
+	/*----------------------- Journal-block-end----------------------- */
 }
 
 
