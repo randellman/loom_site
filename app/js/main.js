@@ -1,5 +1,5 @@
 $(document).ready(function(){
- $('.slider').slick({
+ $('#slider').slick({
   	nextArrow:'<button type="button" class="right-arrow"><i class="fas fa-chevron-right"></i></button>',
   	prevArrow:'<button type="button" class="left-arrow"><i class="fas fa-chevron-left"></i></button>',
     dots: false,
