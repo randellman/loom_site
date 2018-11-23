@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700,800,900');
+@@import 
  
 $main_color_grey: rgb(96, 96, 96);
 $main_color_aqua: rgb(26, 187, 156);
@@ -25,7 +26,6 @@ $main_font_size: 14px;
     top: 50%;
 }
 
-html{
 	h3{
 		font-size:  16px;
 		font-weight: 700;
@@ -52,7 +52,6 @@ html{
 		font-weight: 500;
 		margin: 0;
 	}
-}
 
 body{
 	font-family: 'Raleway', sans-serif;
