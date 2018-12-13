@@ -354,7 +354,7 @@ header{
 	border: 2px solid $main_color_aqua;
 	background-color: transparent;
 	margin: 0 auto;
-		.far, .fas{
+		svg{
 			font-size: 3.4285714285714284em;
 			color: $main_color_aqua;
 			margin-top: 20px;
@@ -363,7 +363,7 @@ header{
 			background-color: $main_color_aqua;
 			cursor: pointer;
 			transition: 0.2s;
-			.far, .fas{
+			svg{
 				color: rgb(255,255,255);				
 			}	
 		}
