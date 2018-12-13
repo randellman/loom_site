@@ -6223,21 +6223,21 @@ header {
 .process-block-item {
   display: block;
   margin-bottom: 30px; }
-  .process-block-item:last-child .process-block-item-link-btn:after {
-    display: none; }
-
-.process-block-item-link {
-  display: block;
-  color: white; }
-  .process-block-item-link h4 {
+  .process-block-item h4 {
     display: inline-block;
     color: #ddd;
     font-size: 0.875em;
     font-weight: 700;
     text-transform: uppercase;
     margin-top: 20px; }
-    .process-block-item-link h4:hover {
+    .process-block-item h4:hover {
       cursor: pointer; }
+  .process-block-item:last-child .process-block-item-link-btn:after {
+    display: none; }
+
+.process-block-item-link {
+  display: block;
+  color: white; }
   .process-block-item-link:hover {
     text-decoration: none;
     cursor: default; }
@@ -6251,25 +6251,28 @@ header {
   border: 2px solid #1abb9c;
   background-color: transparent;
   margin: 0 auto; }
-  .process-block-item-link-btn svg {
+  .process-block-item-link-btn .far, .process-block-item-link-btn .fas {
     font-size: 3.4285714285714284em;
     color: #1abb9c;
     margin-top: 20px; }
   .process-block-item-link-btn:hover {
     background-color: #1abb9c;
-    cursor: pointer; }
-    .process-block-item-link-btn:hover svg {
+    cursor: pointer;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s; }
+    .process-block-item-link-btn:hover .far, .process-block-item-link-btn:hover .fas {
       color: white; }
   .process-block-item-link-btn:after {
     display: inline-block;
     content: '';
-    width: 12vw;
+    width: 8vw;
     height: 1px;
     background-color: #777777;
     position: absolute;
     top: 48px;
-    left: -webkit-calc(100% - 6vw);
-    left: calc(100% - 6vw); }
+    left: -webkit-calc(100% - 4vw);
+    left: calc(100% - 4vw); }
 
 .process-block-item-icon-1 {
   padding: 16px 15px;
