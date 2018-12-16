@@ -9,11 +9,11 @@ $main_font_size: 14px;
 @mixin udapt-img($width, $proportion-height){
     position: relative;
     width: $width;
-  &::before {
-    content: "";
-    display: block;
-    padding-top: $proportion-height;
-}
+  	&::before {
+    	content: "";
+    	display: block;
+    	padding-top: $proportion-height;
+	}
 }
 
 @mixin before_after_strings{ 
